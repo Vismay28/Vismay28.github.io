@@ -139,14 +139,58 @@
     display: table;
     clear: both;
   }
+  .download-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .download-bar span {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  .download-btn {
+    background: #64ffda;
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .download-btn:hover {
+    opacity: 0.85;
+  }
+  body {
+    padding-top: 56px;
+  }
   @media print {
+    .download-bar {
+      display: none;
+    }
     body {
       padding: 0;
+      padding-top: 0;
     }
   }
 </style>
 </head>
 <body>
+
+<div class="download-bar">
+  <span>Vismay Vachhani — Resume</span>
+  <button class="download-btn" onclick="window.print()">Download PDF</button>
+</div>
 
 <h1>Vismay Vachhani</h1>
 <div class="contact">
